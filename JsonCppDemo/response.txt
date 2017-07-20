@@ -1,0 +1,17 @@
+{
+"result_list": [
+        {
+            "code": 0,
+            "message": "success",
+            "url": "http://hearthstone.nos.netease.com/1/artworkGvG/GoblinBlastmagel.jpg",
+            "data": {
+                "result": 0,
+                "forbid_status": 0,
+                "confidence": 0.297,
+                "hot_score": 1.319,
+                "normal_score": 98.681,
+                "porn_score": 0.0
+            }
+        }
+    ]
+}
