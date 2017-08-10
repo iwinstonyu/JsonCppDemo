@@ -2,7 +2,7 @@
 "result_list": [
         {
             "code": 0,
-            "message": "success",
+            "message": "大神俱乐部发起的约战success",
             "url": "http://hearthstone.nos.netease.com/1/artworkGvG/GoblinBlastmagel.jpg",
             "data": {
                 "result": 0,
