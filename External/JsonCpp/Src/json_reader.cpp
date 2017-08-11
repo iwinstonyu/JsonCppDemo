@@ -452,10 +452,10 @@ bool Reader::readString() {
   Char c = '\0';
   while (current_ != end_) {
     c = getNextChar();
-    if (c == '\\')
-      getNextChar();
-    else if (c == '"')
-      break;
+	if (c == '\\')
+		getNextChar();
+	else if (c == '"')
+		break;
   }
   return c == '"';
 }
@@ -1412,10 +1412,10 @@ bool OurReader::readString() {
   Char c = 0;
   while (current_ != end_) {
     c = getNextChar();
-    if (c == '\\')
-      getNextChar();
-    else if (c == '"')
-      break;
+	if (c == '\\')
+		getNextChar();
+	else if (c == '"')
+		break;
   }
   return c == '"';
 }
