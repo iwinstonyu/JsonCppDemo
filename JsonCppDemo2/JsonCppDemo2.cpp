@@ -45,6 +45,11 @@ void PrintJValue(JValue& value, string prefix)
 	}
 }
 
+void TransJValue2GBK(JValue& value)
+{
+
+}
+
 int main()
 {
 	ifstream ifs;
@@ -113,24 +118,24 @@ int main()
 		}
 	}
 
-	for (string::size_type pos(0); pos != string::npos; pos += 2)
-	{
-		pos = strData.find('\\', pos);
-		if (pos != string::npos)
-		{
-			strData.insert(pos, 1, '\\');
-		}
-		else
-		{
-			break;
-		}
-	}
+	//for (string::size_type pos(0); pos != string::npos; pos += 2)
+	//{
+	//	pos = strData.find('\\', pos);
+	//	if (pos != string::npos)
+	//	{
+	//		strData.insert(pos, 1, '\\');
+	//	}
+	//	else
+	//	{
+	//		break;
+	//	}
+	//}
 
 
 	JReader reader;
 	JValue response;
 
-	if (reader.parse(strData, response))
+	if (reader.parse(strUtf8, response))
 	{
 		PrintJValue(response, "");
 
