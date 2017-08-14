@@ -139,6 +139,10 @@ int main()
 	{
 		PrintJValue(response, "");
 
+		cout << endl;
+
+		string str = response.toStyledString();
+
 // 		JValue resultList = response["result_list"];
 // 
 // 		for (Json::ArrayIndex i = 0; i < resultList.size(); ++i)
