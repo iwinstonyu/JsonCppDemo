@@ -13,6 +13,9 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="源文件\json">
+      <UniqueIdentifier>{23c83d7b-d71f-4cf1-a411-990d9e07a25c}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <Text Include="ReadMe.txt" />
@@ -21,27 +24,27 @@
     <ClCompile Include="stdafx.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="JsonCppDemo2.cpp">
-      <Filter>源文件</Filter>
+    <ClCompile Include="..\External\JsonCpp\Src\json_reader.cpp">
+      <Filter>源文件\json</Filter>
     </ClCompile>
     <ClCompile Include="..\External\JsonCpp\Src\json_value.cpp">
-      <Filter>源文件</Filter>
+      <Filter>源文件\json</Filter>
     </ClCompile>
     <ClCompile Include="..\External\JsonCpp\Src\json_writer.cpp">
-      <Filter>源文件</Filter>
+      <Filter>源文件\json</Filter>
     </ClCompile>
-    <ClCompile Include="..\External\JsonCpp\Src\json_reader.cpp">
+    <ClCompile Include="JsonCppDemo2.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\External\JsonCpp\Src\json_tool.h">
-      <Filter>源文件</Filter>
+      <Filter>源文件\json</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="..\External\JsonCpp\Src\json_valueiterator.inl">
-      <Filter>源文件</Filter>
+      <Filter>源文件\json</Filter>
     </None>
   </ItemGroup>
 </Project>
