@@ -11,6 +11,18 @@ using namespace std;
 
 int main()
 {
+	{
+		Json::Value root;
+		Json::FastWriter writer;
+		root["test"] = "test\"";
+		string str = writer.write(root);
+
+		Json::Reader reader;
+		Json::Value root2;
+		reader.parse(str, root2);
+		string strTest = root2["test"].asString();
+	}
+
 	ifstream ifs;
 	ifs.open("response.txt");
 
