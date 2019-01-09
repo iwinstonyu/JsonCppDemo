@@ -3,14 +3,87 @@
 
 #include "stdafx.h"
 
-#include <json\json.h>
+#include <json/json.h>
 #include <fstream>
 #include <iostream>
 #include <string>
+#include <ctime>
 using namespace std;
 
 int main()
 {
+	{
+		Json::Value oldRoot;
+		oldRoot["hello"] = "world";
+		Json::FastWriter writer;
+		string strBuff = writer.write(oldRoot);
+		
+		Json::Value root;
+		Json::Reader reader;
+		try {
+			if (!reader.parse(strBuff, root)) {
+				cout << "Fail parse json msg: " << strBuff << endl;
+				return 1;
+			}
+
+			cout << root["hello"].asUInt() << endl;
+		}
+		catch (std::exception e) {
+			cout << "ProcessMsg exception: " << e.what() << " " << strBuff << endl;
+		}
+
+		system("pause");
+	}
+	
+
+	{
+		clock_t cur = clock();
+
+		for (int i = 0; i < 10000; ++i) {
+			Json::Value root;
+			root["territoryOP"]["wood"] = 1;
+			root["territoryOP"]["iron"] = 1;
+			root["territoryOP"]["stone"] = 1;
+			root["territoryOP"]["food"] = 1;
+
+			root["buildingOP"]["wood"] = 1;
+			root["buildingOP"]["iron"] = 1;
+			root["buildingOP"]["stone"] = 1;
+			root["buildingOP"]["food"] = 1;
+
+			root["allianceCityOP"]["wood"] = 1;
+			root["allianceCityOP"]["iron"] = 1;
+			root["allianceCityOP"]["stone"] = 1;
+			root["allianceCityOP"]["food"] = 1;
+
+			root["troopCostOP"]["wood"] = 1;
+			root["troopCostOP"]["iron"] = 1;
+			root["troopCostOP"]["stone"] = 1;
+			root["troopCostOP"]["food"] = 1;
+
+			Json::FastWriter writer;
+			string str = writer.write(root);
+		}
+
+		cout << "time cost: " << clock() - cur << endl;
+		system("pause");
+	}
+
+
+
+
+	{
+		Json::Value root;
+		Json::FastWriter writer;
+		root["test"] = "test\"";
+		string str = writer.write(root);
+
+		Json::Reader reader;
+		Json::Value root2;
+		reader.parse(str, root2);
+		string strTest = root2["test"].asString();
+	}
+
 	ifstream ifs;
 	ifs.open("response.txt");
 
