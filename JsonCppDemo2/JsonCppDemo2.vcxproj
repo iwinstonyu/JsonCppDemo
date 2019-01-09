@@ -148,9 +148,9 @@
     <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\External\JsonCpp\Src\json_reader.cpp" />
-    <ClCompile Include="..\External\JsonCpp\Src\json_value.cpp" />
-    <ClCompile Include="..\External\JsonCpp\Src\json_writer.cpp" />
+    <ClCompile Include="..\..\ExternalUtil\JsonCpp_1_8_1\Src\json_reader.cpp" />
+    <ClCompile Include="..\..\ExternalUtil\JsonCpp_1_8_1\Src\json_value.cpp" />
+    <ClCompile Include="..\..\ExternalUtil\JsonCpp_1_8_1\Src\json_writer.cpp" />
     <ClCompile Include="JsonCppDemo2.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
@@ -160,10 +160,7 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\External\JsonCpp\Src\json_tool.h" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="..\External\JsonCpp\Src\json_valueiterator.inl" />
+    <ClInclude Include="..\..\ExternalUtil\JsonCpp_1_8_1\Src\json_tool.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -24,27 +24,22 @@
     <ClCompile Include="stdafx.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="..\External\JsonCpp\Src\json_reader.cpp">
-      <Filter>源文件\json</Filter>
-    </ClCompile>
-    <ClCompile Include="..\External\JsonCpp\Src\json_value.cpp">
-      <Filter>源文件\json</Filter>
-    </ClCompile>
-    <ClCompile Include="..\External\JsonCpp\Src\json_writer.cpp">
-      <Filter>源文件\json</Filter>
-    </ClCompile>
     <ClCompile Include="JsonCppDemo2.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\ExternalUtil\JsonCpp_1_8_1\Src\json_value.cpp">
+      <Filter>源文件\json</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\ExternalUtil\JsonCpp_1_8_1\Src\json_writer.cpp">
+      <Filter>源文件\json</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\ExternalUtil\JsonCpp_1_8_1\Src\json_reader.cpp">
+      <Filter>源文件\json</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\External\JsonCpp\Src\json_tool.h">
+    <ClInclude Include="..\..\ExternalUtil\JsonCpp_1_8_1\Src\json_tool.h">
       <Filter>源文件\json</Filter>
     </ClInclude>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="..\External\JsonCpp\Src\json_valueiterator.inl">
-      <Filter>源文件\json</Filter>
-    </None>
   </ItemGroup>
 </Project>

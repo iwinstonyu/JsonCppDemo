@@ -3,7 +3,7 @@
 
 #include "stdafx.h"
 
-#include <json\json.h>
+#include <json/json.h>
 #include <fstream>
 #include <iostream>
 #include <string>
@@ -200,6 +200,30 @@ void WhatsThis() {
 
 int main()
 {
+	{
+		Json::Value oldRoot;
+		oldRoot["hello"] = "world";
+		Json::FastWriter writer;
+		string strBuff = writer.write(oldRoot);
+
+		Json::Value root;
+		Json::Reader reader;
+		try {
+			if (!reader.parse(strBuff, root)) {
+				cout << "Fail parse json msg: " << strBuff << endl;
+				return 1;
+			}
+
+			cout << root["hello"].asUInt() << endl;
+		}
+		catch (std::exception& e) {
+			cout << "ProcessMsg exception: " << e.what() << " " << strBuff << endl;
+		}
+
+		system("pause");
+	}
+
+
 	{
 		string strRoot = "{\"content\":\"***\"}";
 		Json::Value rootVal;
