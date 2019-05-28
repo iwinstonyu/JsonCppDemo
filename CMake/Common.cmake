@@ -1,4 +1,4 @@
-MACRO(m_generate_acg_project _file_name)
+macro(m_generate_acg_project _file_name)
 	set(acg_project "${_file_name}Acg")
 	set(acg_xml "${_file_name}.xml")
 	
@@ -26,7 +26,7 @@ MACRO(m_generate_acg_project _file_name)
 	)   
 	
 	add_custom_target(${PROJECT_NAME} DEPENDS ${generated_files} VERBATIM SOURCES ${sources})
-ENDMACRO()
+endmacro()
 
 macro(m_add_source_group_recursive)
   file(GLOB_RECURSE sources
@@ -49,6 +49,10 @@ endmacro()
 macro(m_stop_cmake)
 	message(FATAL_ERROR "stop cmake: ${PROJECT_NAME}")
 endmacro()
+
+# =================================================
+# include header
+# =================================================
 
 macro(m_inc_dir_solution)
 	include_directories("${CMAKE_SOURCE_DIR}/Inc")
@@ -115,14 +119,18 @@ macro(m_inc_dir_revision)
 	include_directories("${CMAKE_SOURCE_DIR}/Src/Revision/Include")
 endmacro()
 
-#=================================================
+# =================================================
+# link dir
+# =================================================
 
 macro(m_link_dir_boost)
 	link_directories("${CMAKE_SOURCE_DIR}/External/boost/lib/${arch_folder}")
 endmacro()
 
 
-#=================================================
+# =================================================
+# link lib
+# =================================================
 
 macro(m_link_lib_loong_sdk)
 	target_link_libraries(${PROJECT_NAME} 
